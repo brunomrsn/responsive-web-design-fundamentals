@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;	
+}
+
 body, html {
   margin: 0;
   padding: 0;
@@ -33,7 +37,6 @@ ul {
  */
 
 .news__more {
-  float: right;
   font-size: .8em;
   color: #333;
   text-decoration: none;
@@ -154,7 +157,6 @@ main {
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   bottom: 0;
-  height: 40%;
   width: 100%;
   color: #fff;
   padding: 1em;
@@ -212,18 +214,15 @@ main {
  *
  */
 
-.scores {
-  padding-top: 1em;
-}
-
 .scores__table {
   width: 100%;
   border-collapse: collapse;
+  text-align: center;
 }
 
 .scores__table th,
 .scores__table td {
-  padding: 1em; 
+  padding: 1em 0;
 }
 
 .scores__table th {
@@ -314,18 +313,15 @@ main {
  */
 
 .recent-news {
-  clear: both;
   padding: 1em;
 }
 
 .snippet {
-  clear: both;
   margin: 24px 0;
 }
 
 .snippet__thumbnail {
   width: 100px;
-  float: left;
   margin-right: 1em;
 }
 
@@ -366,4 +362,124 @@ footer a {
   text-decoration: none;
   color: #333;
   padding: 1.5em;
+}
+
+.nav_icon {
+	display: none;
+}
+
+.nav {
+	display: block;
+}
+
+.content {
+	border-width: 1px 1px 0 1px;
+	border-style: solid;
+	border-color: lightgray;
+}
+
+.scores, .weather {
+	border-bottom: 1px solid #E0E0E0;
+}
+
+@media screen and (min-width: 541px) {
+	.content {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.hero {
+		width: 100%;
+		order: 0;
+	}
+	.top-news {
+		width: 100%;
+		order: 1;
+	}
+	.weather {
+		width: 50%;
+		order: 2;
+	}
+	.scores {
+		width: 50%;
+		order: 3;
+	}
+	.recent-news {
+		width: 100%;
+		order: 4;
+	}
+}
+
+@media screen and (max-width: 540px) {
+	body {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	main {
+		width: 100%;
+	}
+	.nav {
+		display: none;
+	}
+	.header {
+		width: 80%;
+		box-shadow: none;
+		margin-top: 0;
+		min-height: 0;
+	}
+	.nav_icon {
+		display: block;
+		width: 20%;
+	}
+	.nav_icon img {
+		display: block;
+		margin: auto 0 auto auto;
+	}
+	.header__title {
+		font-size: 1.5em;
+		font-weight: 400;
+	}
+	.header__logo {
+		width: 48px;
+		height: 48px;
+		margin-top: 0;
+	}	
+}
+
+@media screen and (min-width: 960px) {
+	main {
+		box-shadow: none;
+	}
+	.nav, .content {
+		max-width: 960px;
+		margin: 0 auto;
+	}
+	.nav {
+		border-width: 0px 1px;
+		border-style: solid;
+		border-color: lightgray;
+	}
+	.content {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.hero {
+		width: 65%;
+		order: 0;
+	}
+	.weather {
+		width: 35%;
+		order: 1;
+	}
+	.top-news {
+		width: 65%;
+		order: 2;
+	}
+	.scores {
+		width: 35%;
+		order: 3;
+	}
+	.recent-news {
+		width: 100%;
+		order: 4;
+	}
 }
