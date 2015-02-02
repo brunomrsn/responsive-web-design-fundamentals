@@ -372,7 +372,7 @@ footer a {
 }
 
 .content {
-	border-width: 1px 1px 0 1px;
+	border-width: 1px 0 0 0;
 	border-style: solid;
 	border-color: lightgray;
 }
@@ -381,7 +381,7 @@ footer a {
 	border-bottom: 1px solid #E0E0E0;
 }
 
-@media screen and (min-width: 541px) {
+@media (min-width: 541px) {
 	.content {
 		display: flex;
 		flex-wrap: wrap;
@@ -408,7 +408,7 @@ footer a {
 	}
 }
 
-@media screen and (max-width: 540px) {
+@media (max-width: 540px) {
 	body {
 		display: flex;
 		flex-wrap: wrap;
@@ -444,18 +444,26 @@ footer a {
 	}	
 }
 
-@media screen and (min-width: 960px) {
+.scores__table td[data-team]:after {
+	content: attr(data-team);
+}
+
+@media 
+(min-width: 800px) and (max-width: 900px), 
+(min-width: 540px) and (max-width: 640px),
+(max-width: 370px) {
+	.scores__table td[data-abbr]:after {
+		content: attr(data-abbr);
+	}
+}
+
+@media (min-width: 800px) {
 	main {
 		box-shadow: none;
 	}
 	.nav, .content {
 		max-width: 960px;
 		margin: 0 auto;
-	}
-	.nav {
-		border-width: 0px 1px;
-		border-style: solid;
-		border-color: lightgray;
 	}
 	.content {
 		display: flex;
@@ -480,5 +488,9 @@ footer a {
 	.recent-news {
 		width: 100%;
 		order: 4;
+	}
+	.header__inner, footer ul {
+		max-width: 960px;
+		margin: 0 auto;	
 	}
 }
