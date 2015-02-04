@@ -363,13 +363,9 @@ footer a {
   padding: 1.5em;
 }
 
-.nav_icon {
-	display: none;
-}
+.nav_icon {	display: none; }
 
-.nav {
-	display: block;
-}
+.nav { display: block; }
 
 .content {
 	border-width: 1px 0 0 0;
@@ -377,120 +373,141 @@ footer a {
 	border-color: lightgray;
 }
 
-.scores, .weather {
+.scores, 
+.weather {
 	border-bottom: 1px solid #E0E0E0;
 }
 
 @media (min-width: 541px) {
+	
 	.content {
 		display: flex;
 		flex-wrap: wrap;
 	}
+	
 	.hero {
 		width: 100%;
 		order: 0;
 	}
+	
 	.top-news {
 		width: 100%;
 		order: 1;
 	}
+	
 	.weather {
 		width: 50%;
 		order: 2;
 	}
+	
 	.scores {
 		width: 50%;
 		order: 3;
 	}
+	
 	.recent-news {
 		width: 100%;
 		order: 4;
 	}
+	
 }
 
 @media (max-width: 540px) {
+	
 	body {
 		display: flex;
 		flex-wrap: wrap;
 	}
-	main {
-		width: 100%;
-	}
-	.nav {
+	
+	main { width: 100%; }
+	
+	.nav__list {
 		display: none;
 	}
+	
 	.header {
 		width: 80%;
 		box-shadow: none;
 		margin-top: 0;
 		min-height: 0;
 	}
-	.nav_icon {
+	
+	.nav {
 		display: block;
 		width: 20%;
 	}
-	.nav_icon img {
+	
+	.nav_icon {
 		display: block;
 		margin: auto 0 auto auto;
 	}
+	
 	.header__title {
 		font-size: 1.5em;
 		font-weight: 400;
 	}
+	
 	.header__logo {
 		width: 48px;
 		height: 48px;
 		margin-top: 0;
-	}	
+	}
+	
 }
 
-.scores__table td[data-team]:after {
-	content: attr(data-team);
-}
+.scores__table td[data-team]:after { content: attr(data-team); }
 
 @media 
 (min-width: 800px) and (max-width: 900px), 
 (min-width: 540px) and (max-width: 640px),
 (max-width: 370px) {
-	.scores__table td[data-abbr]:after {
-		content: attr(data-abbr);
-	}
+	
+	.scores__table td[data-abbr]:after { content: attr(data-abbr); }
+	
 }
 
 @media (min-width: 800px) {
-	main {
-		box-shadow: none;
-	}
+	
+	main { box-shadow: none; }
+	
 	.nav, .content {
 		max-width: 960px;
 		margin: 0 auto;
 	}
+	
 	.content {
 		display: flex;
 		flex-wrap: wrap;
 	}
+	
 	.hero {
 		width: 65%;
 		order: 0;
 	}
+	
 	.weather {
 		width: 35%;
 		order: 1;
 	}
+	
 	.top-news {
 		width: 65%;
 		order: 2;
 	}
+	
 	.scores {
 		width: 35%;
 		order: 3;
 	}
+	
 	.recent-news {
 		width: 100%;
 		order: 4;
 	}
+	
 	.header__inner, footer ul {
 		max-width: 960px;
 		margin: 0 auto;	
 	}
+	
 }
